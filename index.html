@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>TOP: Sign-up Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="column-left">
+            <div id="darkDiv">
+                <img src="./media/odin-lined.png" alt="The Odin Project Logo">
+                <span id="logo">Odin</span>
+            </div>
+            <footer>
+                Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Halie West</a> on <a href="https://unsplash.com">Unsplash</a>
+            </footer>
+        </div>
+        <div class="column-right">
+            <section>
+                <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+                Sign up <em>now</em> to get started.<br><br>
+                You <em>know</em> you want to.</h3>
+            </section>
+            <section>
+                <h3>Let's do this!</h3>
+                <form action="" method="post" id="mainForm">    
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="John" required oninvalid="setCustomValidity('Please type in your first name.');" oninput="setCustomValidity('');">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                    </div>
+                    <div>
+                        <label for="emailAddress">Email</label>
+                        <input type="email" name="emailAddress" id="emailAddress" required oninvalid="setCustomValidity('Please provide a valid email address');" oninput="setCustomValidity('');">
+                    </div>
+                    <div>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="123-456-7890">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required oninvalid="setCustomValidity('Please type in a password');" oninput="setCustomValidity('');">
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" required 
+                        onchange="validatePassword();"
+                        oninput="setCustomValidity('');">
+                    </div>
+                </form>
+            </section>
+            <section>
+                <p><button type="submit" class="btn" form="mainForm" value="Submit">Create Account</button></p>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
